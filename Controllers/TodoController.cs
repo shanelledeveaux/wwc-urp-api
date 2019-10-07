@@ -25,6 +25,7 @@ namespace TodoApi.Controllers
         [HttpGet]
         public ActionResult<List<TodoItem>> GetAll()
         {
+            var egg = _context.People.ToList();
             return _context.TodoItems.ToList();
         }
 
