@@ -13,5 +13,13 @@ namespace WwcUrpApi.Models
 
         }
         public DbSet<Person> People { get; set; }
+        public DbSet<Accomplishment> Accomplishment { get; set; }
+        public DbSet<Education> Education { get; set; }
+        public DbSet<Employment> Employment { get; set; }
+        public DbSet<Home> Home { get; set; }
+        public DbSet<Location> Location { get; set; }
+        public DbSet<OtherAssociation> OtherAssociation { get; set; }
+        public DbSet<Pronoun> Pronoun { get; set; }
+
     }
 }
