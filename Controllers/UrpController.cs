@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
-using TodoApi.Models;
 using WwcUrpApi.Models;
 
 namespace WwcUrpApi.Controllers
