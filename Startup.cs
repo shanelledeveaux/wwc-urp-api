@@ -39,11 +39,7 @@ namespace TodoApi
     options.SwaggerDoc("v1", new Info
     {
         Version = "v1",
-        Title = "Application API",
-        Description = "Application Documentation",
-        TermsOfService = "None",
-        Contact = new Contact { Name = "Author", Url = "" },
-        License = new License { Name = "MIT", Url = "https://en.wikipedia.org/wiki/MIT_License" }
+        Title = "WWC"
     });
 
     // Add XML comment document by uncommenting the following
@@ -65,7 +61,8 @@ namespace TodoApi
             {
                 app.UseHsts();
             }
-
+            app.UseSwagger(options => options.PreSerializeFilters.Add((swagger, httpReq) => swagger.Host = httpReq.Host.Value));
+            app.UseSwaggerUI(options => options.SwaggerEndpoint("/swagger/v1/swagger.json", "WWC V1"));
             app.UseHttpsRedirection();
             app.UseMvc();
         }
