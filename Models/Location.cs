@@ -15,7 +15,7 @@ namespace WwcUrpApi.Models
         public string CountryFullName { get; set; }
         public string CountryCommonName { get; set; }
         public string CountryAbbreviation { get; set; }
-        public string RegionDesription { get; set; }
+        public string RegionDescription { get; set; }
         public string RegionAbbreviation { get; set; }
         public string MetroArea { get; set; }
     }
