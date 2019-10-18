@@ -16,7 +16,9 @@ namespace WwcUrpApi.Models
         public string FieldOfStudy { get; set; }
         public int StartYear { get; set; }
         public int EndYear { get; set; }
+        public int PersonId { get; set; }
         public virtual Person Person { get; set; }
+        public int LocationId { get; set; }
         public virtual Location Location { get; set; }
     }
 }

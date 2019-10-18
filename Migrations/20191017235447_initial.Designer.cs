@@ -10,7 +10,7 @@ using WwcUrpApi.Models;
 namespace wwcurpapi.Migrations
 {
     [DbContext(typeof(UrpContext))]
-    [Migration("20191008014340_initial")]
+    [Migration("20191017235447_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -76,9 +76,11 @@ namespace wwcurpapi.Migrations
 
                     b.Property<string>("Company");
 
-                    b.Property<int>("EndsYear");
+                    b.Property<int>("EndYear");
 
                     b.Property<string>("Job");
+
+                    b.Property<string>("Notes");
 
                     b.Property<int?>("PersonId");
 
@@ -128,7 +130,7 @@ namespace wwcurpapi.Migrations
 
                     b.Property<string>("RegionAbbreviation");
 
-                    b.Property<string>("RegionDesription");
+                    b.Property<string>("RegionDescription");
 
                     b.HasKey("LocationId");
 
@@ -172,9 +174,13 @@ namespace wwcurpapi.Migrations
 
                     b.Property<string>("CommonName");
 
+                    b.Property<int>("DeathYear");
+
                     b.Property<string>("Description");
 
                     b.Property<string>("FullName");
+
+                    b.Property<string>("Notes");
 
                     b.Property<int?>("PronounId");
 

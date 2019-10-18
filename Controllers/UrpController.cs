@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using WwcUrpApi.Models;
@@ -17,10 +18,19 @@ namespace WwcUrpApi.Controllers
         }
 
         [HttpGet]
-        public ActionResult<List<Person>> GetAll()
-
+        public IQueryable<Person> GetAll()
         {
-            return _context.People.ToList();
+            var people = _context.People
+                .Include(a => a.Pronoun)
+                .Include(a => a.Accomplishments)
+                .Include(a => a.Education)
+                //.ThenInclude(b => b.Location)
+                .Include(a => a.OtherAssociations)
+                .Include(a => a.Location);
+
+            return people;
+
         }
     }
 }
+

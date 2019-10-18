@@ -16,7 +16,7 @@ namespace wwcurpapi.Migrations
                     CountryFullName = table.Column<string>(nullable: true),
                     CountryCommonName = table.Column<string>(nullable: true),
                     CountryAbbreviation = table.Column<string>(nullable: true),
-                    RegionDesription = table.Column<string>(nullable: true),
+                    RegionDescription = table.Column<string>(nullable: true),
                     RegionAbbreviation = table.Column<string>(nullable: true),
                     MetroArea = table.Column<string>(nullable: true)
                 },
@@ -49,7 +49,9 @@ namespace wwcurpapi.Migrations
                     FullName = table.Column<string>(nullable: true),
                     CommonName = table.Column<string>(nullable: true),
                     BirthYear = table.Column<int>(nullable: false),
+                    DeathYear = table.Column<int>(nullable: false),
                     Description = table.Column<string>(nullable: true),
+                    Notes = table.Column<string>(nullable: true),
                     PronounId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
@@ -124,8 +126,9 @@ namespace wwcurpapi.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
                     Company = table.Column<string>(nullable: true),
                     Job = table.Column<string>(nullable: true),
+                    Notes = table.Column<string>(nullable: true),
                     StartYear = table.Column<int>(nullable: false),
-                    EndsYear = table.Column<int>(nullable: false),
+                    EndYear = table.Column<int>(nullable: false),
                     PersonId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
