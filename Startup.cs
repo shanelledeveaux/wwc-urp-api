@@ -59,7 +59,7 @@ namespace TodoApi
             }
             else
             {
-                app.UseHsts();
+                app.UseExceptionHandler();
             }
             app.UseSwagger(options => options.PreSerializeFilters.Add((swagger, httpReq) => swagger.Host = httpReq.Host.Value));
             app.UseSwaggerUI(options => options.SwaggerEndpoint("/swagger/v1/swagger.json", "WWC V1"));
