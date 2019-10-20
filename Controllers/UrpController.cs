@@ -24,9 +24,8 @@ namespace WwcUrpApi.Controllers
                 .Include(a => a.Pronoun)
                 .Include(a => a.Accomplishments)
                 .Include(a => a.Education)
-                //.ThenInclude(b => b.Location)
-                .Include(a => a.OtherAssociations)
-                .Include(a => a.Location);
+                    .ThenInclude(b => b.Location)
+                .Include(a => a.OtherAssociations);
 
             return people;
 

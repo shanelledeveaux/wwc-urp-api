@@ -21,8 +21,7 @@ namespace WwcUrpApi.Models
         public int DeathYear { get; set; }
         public ICollection<Accomplishment> Accomplishments { get; set; }
         public ICollection<Education> Education { get; set; }
-        public ICollection<Home> Home { get; set; }
-        public ICollection<Location> Location { get; set; }
+        public ICollection<Employment> Employment { get; set; }
         public ICollection<OtherAssociation> OtherAssociations { get; set; }
     }
 }
