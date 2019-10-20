@@ -5,8 +5,8 @@ jobs:
     steps:
       - checkout
 
-      - run: |
-        ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+      # - run: |
+      #     ssh-keyscan -H github.com >> ~/.ssh/known_hosts
       # build image
       - run: |
           docker info
